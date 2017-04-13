@@ -32,9 +32,9 @@
                         @foreach ($purchases as $purchase)
                             <tr class="cj_purchase">
                                 <td>{{ $purchase->id }}</td>
-                                <td>{{ $purchase->offering->offering }}</td>
+                                <td>{{ App\Offering::find($purchase->offeringId)->offering }}</td>
                                 <td class="cj_quantity">{{ $purchase->quantity }}</td>
-                                <td class="cj_price">{{ $purchase->offering->price }}</td>
+                                <td class="cj_price">{{ App\Offering::find($purchase->offeringId)->offering }}</td>
                                 <td class="cj_subtotal"></td>
                            
                             </tr>

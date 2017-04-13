@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 use App\Purchase;
 use App\Offering;
 use App\User;
-use App\Log;
+use Log;
 
 class HomeController extends Controller
 {
@@ -36,9 +36,10 @@ class HomeController extends Controller
 
     public function basket()
     {
-        //$purchases=Purchase::all();
-        $purchases=Purchase::with('offering')->get();
-        return view('basket',array('purchases'=>$purchase));
+        $purchases=Purchase::all();
+        //$purchases=Purchase::with('offering')->get();
+        Log::info($purchases);
+        return view('basket',array('purchases'=>$purchases));
     }  
 
     // add new purchase
