@@ -39,7 +39,7 @@ class HomeController extends Controller
     }  
 
     // add new purchase
-    public function basket(Request $request)
+    public function add_order(Request $request)
     {
         //validate input
         $validator = Validator::make($request->all(), [
