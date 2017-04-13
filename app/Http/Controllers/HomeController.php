@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Purchase;
 use App\Offering;
 use App\User;
+use App\Log;
 
 class HomeController extends Controller
 {
@@ -28,7 +29,8 @@ class HomeController extends Controller
     public function index()
     {
         $items=Offering::all();
-        return view('home',array('$items'=>$items));
+
+        return view('home',array('items'=>$items));
     }
 
     public function basket()
