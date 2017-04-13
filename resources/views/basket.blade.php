@@ -26,7 +26,7 @@
                         </tr>
                     </thead>
                     <tfoot>
-                        <tr><td>Total amount: <span class="cj_total"></span></td></tr>
+                        <tr><td><h4>Total amount: <span class="cj_total"></h4></span></td></tr>
                     </tfoot>
                     <tbody>
                         @foreach ($purchases as $purchase)
@@ -34,7 +34,7 @@
                                 <td>{{ $purchase->id }}</td>
                                 <td>{{ App\Offering::find($purchase->offeringId)->offering }}</td>
                                 <td class="cj_quantity">{{ $purchase->quantity }}</td>
-                                <td class="cj_price">{{ App\Offering::find($purchase->offeringId)->offering }}</td>
+                                <td class="cj_price">{{ App\Offering::find($purchase->offeringId)->price }}</td>
                                 <td class="cj_subtotal"></td>
                            
                             </tr>
