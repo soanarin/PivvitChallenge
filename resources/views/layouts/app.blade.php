@@ -69,7 +69,8 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
                         &nbsp;
-
+                            <li><a href="{{ route('orderRoute') }}">Order Products</a></li>
+                            <li><a href="{{ route('basketRoute') }}">Your Basket</a></li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->

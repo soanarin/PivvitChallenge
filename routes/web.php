@@ -17,4 +17,8 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index');
+Route::get('/home', 'HomeController@index')->name('orderRoute');;
+
+Route::post('/basket','HomeController@add_order');
+
+Route::get('/basket', 'HomeController@basket')->name('basketRoute');;
