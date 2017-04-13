@@ -49,7 +49,7 @@ class HomeController extends Controller
 
         $this->validate($request, [
             'customerName' => 'required|max:100',
-            'offeringId'=>'reuqired',
+            'item'=>'required',
             'quantity'=>'required'
         ]);
 

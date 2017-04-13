@@ -36,7 +36,7 @@
 
                         <!-- customer name -->
                         <div class="form-group">
-                            <label for="customerName" class="col-sm-3 control-label">Name</label>
+                            <label for="customerName" class="col-sm-3 control-label">Customer Name</label>
 
                             <div class="col-sm-6">
                                 <input type="text" class="form-control" id="customerName" name="customerName" value="{{ old('customerName') }}" placeholder="Name">
