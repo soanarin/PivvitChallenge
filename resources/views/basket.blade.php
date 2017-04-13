@@ -7,12 +7,12 @@
 
         <div class="panel panel-default">
             <div class="panel-heading">
-                Your Order
+                <h3>Your Order</h3>
             </div>
 
             <div class="panel-body">
                
-                <table id="Order" class="display" cellspacing="0" width="100%">
+                <table id="Order" class="table table-striped" cellspacing="0" width="100%">
                     <thead>
                         <tr>
                             <th>Purchase ID</th>
@@ -26,7 +26,7 @@
                         </tr>
                     </thead>
                     <tfoot>
-                        <tr><td><h4>Total amount: <span class="cj_total"></h4></span></td></tr>
+                        
                     </tfoot>
                     <tbody>
                         @foreach ($purchases as $purchase)
@@ -38,8 +38,9 @@
                                 <td class="cj_subtotal"></td>
                            
                             </tr>
-                        @endforeach                       
-                    </tbody>
+                        @endforeach 
+                        <tr class='cs_total'><td colspan="5"><h4>Total amount: <span class="cj_total"></h4></span></td></tr>       
+                    </tbody> 
                 </table>
 
 

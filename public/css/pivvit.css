@@ -1,4 +1,6 @@
-/*resize datepicker*/
-div.ui-datepicker{
- font-size:10px;
+.cs_total{
+	text-align: right;
+	margin-right: 30px;
+	font-weight: bold;
+	color: red;
 }
