@@ -54,7 +54,7 @@ class HomeController extends Controller
 
         //insert to database
         $order=new Purchase;
-        $order->offerinId=$request->item;
+        $order->offeringId=$request->item;
         $order->customerName=$request->customerName;
         $order->quantity=$request->quantity;
         $order->save();
