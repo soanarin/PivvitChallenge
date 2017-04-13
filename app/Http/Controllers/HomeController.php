@@ -38,7 +38,7 @@ class HomeController extends Controller
     {
         //$purchases=Purchase::all();
         $purchases=Purchase::with('offering')->get();
-        return view('basket',array('$purchases'=>$purchase));
+        return view('basket',array('purchases'=>$purchase));
     }  
 
     // add new purchase
