@@ -17,6 +17,7 @@
 
                         {{ csrf_field() }}
 
+
                         <!-- offerings -->
                         <div class="form-group">
                             <label for="item" class="col-sm-3 control-label">Select item</label>
@@ -25,7 +26,7 @@
                                 <select type="text" name="item" id="item" class="form-control">
                                     <option value="">--Select Item--</option>
                                     @foreach ($items as $item)
-                                        <option value="{{$item->id}}">{{$item->offering}}</option>
+                                        <option value="{{$item->id}}" data-price="{{$item->price}}">{{$item->offering}}</option>
                                     @endforeach
 
 
@@ -47,7 +48,7 @@
                             <label for="quantity" class="col-sm-3 control-label">How Many</label>
 
                             <div class="col-sm-6">
-                                <input type="number"  name="quantity" id="quantity" class="form-control" value="{{ old('quantity') }}" placeholder='00'>
+                                <input type="number"  name="quantity" id="quantity" class="form-control" value="{{ old('quantity') }}" placeholder='0'>
                             </div>
                         </div>
 
