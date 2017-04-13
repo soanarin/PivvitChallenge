@@ -9,7 +9,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
 
-    <title>{{ config('app.name', 'Financisto') }}</title>
+    <title>{{ config('app.name', 'PivvitChallenge') }}</title>
 
 
         <!-- Fonts -->
