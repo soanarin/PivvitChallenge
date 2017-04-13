@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+
 use App\Purchase;
 use App\Offering;
 use App\User;
@@ -44,17 +45,12 @@ class HomeController extends Controller
     public function add_order(Request $request)
     {
         //validate input
-        $validator = Validator::make($request->all(), [
+
+        $this->validate($request, [
             'customerName' => 'required|max:100',
             'offeringId'=>'reuqired',
             'quantity'=>'required'
         ]);
-
-        if ($validator->fails()) {
-            return redirect('/')
-                ->withInput()
-                ->withErrors($validator);
-        }
 
         //insert to database
         $order=new Purchase;
